@@ -64,6 +64,8 @@ The run command must print one JSON object to stdout.
 
 See [rules.md](rules.md) for participant rules.
 
+See [docs/contest-operations.md](docs/contest-operations.md) for the organizer runbook, leaderboard plan, and anti-gaming model.
+
 ## Local Smoke Test
 
 Run the sample agent:
