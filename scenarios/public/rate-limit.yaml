@@ -1,0 +1,8 @@
+id: public-rate-limit
+name: Rate limit recovery
+description: The primary model provider returns transient rate limit errors.
+expected_behavior:
+  - retry with backoff
+  - avoid retry loops
+  - use a fallback route when available
+  - return a useful final answer

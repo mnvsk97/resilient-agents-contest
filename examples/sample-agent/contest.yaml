@@ -1,0 +1,4 @@
+name: sample-agent
+run_command: ./contest/run.sh
+max_runtime_seconds: 30
+external_services: []

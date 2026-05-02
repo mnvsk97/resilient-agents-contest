@@ -1,0 +1,29 @@
+name: resilient-agents-contest
+version: 0.1
+
+submission:
+  run_command: ./contest/run.sh
+  healthcheck_command: ./contest/healthcheck.sh
+  output_format: json
+  max_runtime_seconds: 300
+  max_budget_usd: 2
+
+required_environment:
+  - TRUEFOUNDRY_GATEWAY_BASE_URL
+  - TRUEFOUNDRY_API_KEY
+
+optional_environment:
+  - OPENAI_API_KEY
+  - ANTHROPIC_API_KEY
+
+network:
+  allowed: true
+  declare_external_services: true
+
+scoring:
+  resilience: 35
+  correctness: 20
+  recovery: 15
+  gateway_usage: 15
+  product_usefulness: 10
+  readme_demo: 5

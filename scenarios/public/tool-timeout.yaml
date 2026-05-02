@@ -1,0 +1,8 @@
+id: public-tool-timeout
+name: Tool timeout recovery
+description: A required tool call times out during task execution.
+expected_behavior:
+  - enforce request timeouts
+  - retry or select an alternate tool
+  - preserve task state
+  - return partial progress if full recovery is impossible

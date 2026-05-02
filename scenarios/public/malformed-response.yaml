@@ -1,0 +1,8 @@
+id: public-malformed-response
+name: Malformed response recovery
+description: A model or tool returns malformed JSON.
+expected_behavior:
+  - detect invalid output
+  - repair or request regeneration safely
+  - avoid accepting corrupt data as final truth
+  - explain recovered errors in output metadata
