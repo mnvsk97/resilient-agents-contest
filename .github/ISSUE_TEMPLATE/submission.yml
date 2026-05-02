@@ -1,0 +1,73 @@
+name: Contest submission
+description: Submit a project for the Resilient Agents Contest.
+title: "[Submission]: "
+labels:
+  - submission
+body:
+  - type: input
+    id: team
+    attributes:
+      label: Team name
+      description: Public team name for the leaderboard.
+      placeholder: Reliable Agents Club
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Submission repository
+      description: GitHub URL that organizers can access.
+      placeholder: https://github.com/example/reliable-agent
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: Project name
+      placeholder: Reliable Support Agent
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: What workflow does the agent solve?
+    validations:
+      required: true
+  - type: textarea
+    id: gateway
+    attributes:
+      label: TrueFoundry AI Gateway usage
+      description: Describe routing, fallback, observability, policy, budgets, guardrails, or other Gateway usage.
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Required environment variables
+      description: List variable names only. Do not include secret values.
+      placeholder: |
+        TRUEFOUNDRY_GATEWAY_BASE_URL
+        TRUEFOUNDRY_API_KEY
+    validations:
+      required: true
+  - type: input
+    id: demo
+    attributes:
+      label: Demo video URL
+      description: Optional but recommended for final judging.
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: Submission checklist
+      options:
+        - label: The repo includes README.md, contest.yaml, contest/run.sh, contest/healthcheck.sh, and Dockerfile.
+          required: true
+        - label: The submission runs non-interactively.
+          required: true
+        - label: Secrets are read from environment variables only.
+          required: true
+        - label: The run command prints one valid JSON object to stdout.
+          required: true
+        - label: The submission does not hardcode public scenario answers or inspect hidden evaluator data.
+          required: true

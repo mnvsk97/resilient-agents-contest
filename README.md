@@ -66,10 +66,24 @@ See [rules.md](rules.md) for participant rules.
 
 See [docs/contest-operations.md](docs/contest-operations.md) for the organizer runbook, leaderboard plan, and anti-gaming model.
 
+See [leaderboard.md](leaderboard.md) for verified results.
+
+Submit projects through the GitHub issue form once submissions open.
+
 ## Local Smoke Test
 
 Run the sample agent:
 
 ```bash
 python3 evaluator/run_submission.py examples/sample-agent
+```
+
+Generate a local leaderboard:
+
+```bash
+python3 evaluator/run_submission.py examples/sample-agent \
+  --team "Sample Team" \
+  --project "Sample Agent" \
+  --result-file results/sample-team.json
+python3 scripts/generate_leaderboard.py
 ```

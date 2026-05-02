@@ -34,6 +34,7 @@ Organizer tasks:
 - Confirm judge panel and finalist review process.
 - Decide how submissions are collected: GitHub issue form, Google Form, or manual repo list.
 - Decide how the leaderboard is published: `leaderboard.md`, GitHub Pages, or both.
+- Keep final hidden scenarios in a private organizer workspace. See `docs/hidden-scenarios.md`.
 
 Output:
 
@@ -92,6 +93,8 @@ Minimum submission fields:
 - Notes on TrueFoundry AI Gateway usage
 - Any required environment variables, without secret values
 
+For the GitHub-first flow, use the issue form in `.github/ISSUE_TEMPLATE/submission.yml`.
+
 Submission requirements:
 
 - Repo must be accessible to organizers.
@@ -118,6 +121,12 @@ The evaluator should:
 - collect logs and traces
 - write one result JSON per team
 - update the leaderboard from verified results
+
+For v1, write verified outputs to `results/*.json` and regenerate the public leaderboard:
+
+```bash
+python3 scripts/generate_leaderboard.py
+```
 
 Recommended result file shape:
 
@@ -201,6 +210,7 @@ The goal is not to hide the existence of failures. The goal is to prevent partic
 ### Practical Guardrails
 
 - Keep hidden scenarios private and outside the public repo.
+- Follow `docs/hidden-scenarios.md` when preparing finalist verification tasks.
 - Do not mount hidden scenario files into the participant container.
 - Pass tasks over stdin, HTTP, or temporary files with neutral names.
 - Randomize task IDs, names, timing, and injected fault schedules.
