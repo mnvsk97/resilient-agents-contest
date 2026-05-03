@@ -32,7 +32,7 @@ Organizer tasks:
 - Confirm Discord support channel.
 - Confirm prize terms and eligibility.
 - Confirm judge panel and finalist review process.
-- Decide how submissions are collected: GitHub issue form, Google Form, or manual repo list.
+- Decide how private submissions are collected: Google Form, Tally, Airtable, Typeform, or private email.
 - Decide how the leaderboard is published: `leaderboard.md`, GitHub Pages, or both.
 - Keep final hidden scenarios in a private organizer workspace. See `docs/hidden-scenarios.md`.
 
@@ -40,7 +40,7 @@ Output:
 
 - Public contest repo ready.
 - Registration link live.
-- Submission intake method live.
+- Private submission intake method live.
 - Public support channel live.
 
 ### 2. Launch
@@ -93,7 +93,7 @@ Minimum submission fields:
 - Notes on TrueFoundry AI Gateway usage
 - Any required environment variables, without secret values
 
-For the GitHub-first flow, use the issue form in `.github/ISSUE_TEMPLATE/submission.yml`.
+Do not use public GitHub issues for submissions if teams should not see each other's work. Use a private form or private email intake. See `docs/private-submission-intake.md`.
 
 Submission requirements:
 
@@ -225,7 +225,7 @@ The goal is not to hide the existence of failures. The goal is to prevent partic
 
 - Registration: Luma
 - Support: Discord
-- Submission intake: GitHub issue form or Google Form
+- Submission intake: private form or private email
 - Evaluation: organizer-run script plus hidden scenarios
 - Results storage: `results/*.json`
 - Leaderboard: generated `leaderboard.md`
@@ -234,7 +234,7 @@ The goal is not to hide the existence of failures. The goal is to prevent partic
 ## Open Questions
 
 - Will submissions be public during the contest or only after judging?
-- Will teams submit through GitHub issues, a form, or email?
+- Will teams submit through a private form, private email, or another private intake path?
 - Will participants get multiple official leaderboard attempts?
 - What are the exact runtime and cost budgets?
 - Which TrueFoundry AI Gateway features are required versus optional?

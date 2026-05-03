@@ -68,7 +68,7 @@ See [docs/contest-operations.md](docs/contest-operations.md) for the organizer r
 
 See [leaderboard.md](leaderboard.md) for verified results.
 
-Submit projects through the GitHub issue form once submissions open.
+Submissions should go through a private form so teams cannot inspect each other's projects before judging. See [docs/private-submission-intake.md](docs/private-submission-intake.md).
 
 ## Local Smoke Test
 
